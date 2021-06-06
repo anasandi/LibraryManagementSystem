@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" version="2.4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>LibrarySystem</display-name>
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<listener>
+		<listener-class>com.library.management.listeners.ContextListener</listener-class>
+	</listener>
+
+	<!-- User Management Servlets -->
+	<servlet>
+		<display-name>MemberListServlet</display-name>
+		<servlet-name>MemberListServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.MemberListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MemberListServlet</servlet-name>
+		<url-pattern>/admin/members</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>AddMemberServlet</display-name>
+		<servlet-name>AddMemberServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.RegisterMemberServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddMemberServlet</servlet-name>
+		<url-pattern>/admin/addMember</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>RegisterMemberServlet</display-name>
+		<servlet-name>RegisterMemberServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.RegisterMemberServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegisterMemberServlet</servlet-name>
+		<url-pattern>/members/registerMember</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>RemoveMemberServlet</display-name>
+		<servlet-name>RemoveMemberServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.RemoveMemberServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RemoveMemberServlet</servlet-name>
+		<url-pattern>/admin/deleteMember</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LogoutServlet</display-name>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<!-- End User Management Servlets -->
+	
+	<!-- Member Borrow Book Servlets -->
+     <servlet>
+		<display-name>MemberBookListServlet</display-name>
+		<servlet-name>MemberBookListServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.MemberBookListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberBookListServlet</servlet-name>
+		<url-pattern>/members/userbooks</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<display-name>MemberBorrowListServlet</display-name>
+		<servlet-name>MemberBorrowListServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.MemberBorrowListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberBorrowListServlet</servlet-name>
+		<url-pattern>/members/borrowList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>MemberBorrowBookServlet</display-name>
+		<servlet-name>MemberBorrowBookServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.MemberBorrowBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	     <servlet-name>MemberBorrowBookServlet</servlet-name>
+	     <url-pattern>/members/borrow</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>MemberReturnBookServlet</display-name>
+		<servlet-name>MemberReturnBookServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.MemberReturnBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	     <servlet-name>MemberReturnBookServlet</servlet-name>
+	     <url-pattern>/members/returnBook</url-pattern>
+	</servlet-mapping>
+	<!-- End Member Borrow Book Servlets -->
+	<!-- Book Management Servlets -->
+	<servlet>
+		<display-name>BookListServlet</display-name>
+		<servlet-name>BookListServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.BookListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BookListServlet</servlet-name>
+		<url-pattern>/admin/books</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>AddBookServlet</display-name>
+		<servlet-name>AddBookServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.AddBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddBookServlet</servlet-name>
+		<url-pattern>/admin/addBook</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>DeleteBookServlet</display-name>
+		<servlet-name>DeleteBookServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.DeleteBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteBookServlet</servlet-name>
+		<url-pattern>/admin/deleteBook</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>EditBookServlet</display-name>
+		<servlet-name>EditBookServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.EditBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EditBookServlet</servlet-name>
+		<url-pattern>/admin/editBook</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>BorrowRecordsServlet</display-name>
+		<servlet-name>BorrowRecordsServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.BorrowRecordsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BorrowRecordsServlet</servlet-name>
+		<url-pattern>/admin/books/borrow</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>ReturnRecordsServlet</display-name>
+		<servlet-name>ReturnRecordsServlet</servlet-name>
+		<servlet-class>com.library.management.servlet.ReturnRecordsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReturnRecordsServlet</servlet-name>
+		<url-pattern>/admin/books/return</url-pattern>
+	</servlet-mapping>
+	<!-- End Book Management Servlets -->
+
+	<!-- Error Page -->
+	<error-page>
+		<exception-type>com.library.management.exception.BooksNotFoundException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.library.management.exception.BookNotFoundException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.library.management.exception.UpdateFailureException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.library.management.exception.RegisterFailureException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.library.management.exception.UserNotFoundException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.library.management.exception.UnauthorizedException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>javax.servlet.UnavailableException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.library.management.exception.PersistenceFailureException</exception-type>
+		<location>/pages/error.jsp</location>
+	</error-page>
+</web-app>

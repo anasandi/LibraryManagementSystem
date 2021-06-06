@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/Poppins-SemiBold.ttf'); 
+}
+
+@font-face{
+	font-family: FontAwesome;
+	src: url('../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+
+@font-face { 
+	font-family: 'Raleway'; 
+	src: url('../fonts/Raleway-Regular.ttf'); 
+}
+
+
+body{
+	font-family: Raleway;
+}
+
+
+.bg-image{
+  z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background.jpeg');
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+}
+
+.btn-primary{
+	background-color: #212529;
+	border-color: #212529;	
+}
+
+.disabled{
+	pointer-events: none;
+}
+/** login */
+.login-box{
+	margin: 1em auto;
+}
+
+/** users */
+.page-header{
+	margin: 1em 0;
+}
+
+.page-item.active .page-link {
+    z-index: 0 !important;
+ }
+
+/** userform */
+.registration-form{
+	margin: 0 7em;
+}
+
+.calendar{
+	position: absolute !important;
+	align-items: center;
+    padding: 0.58em 1em;
+
+    /* background: #d2d2d2; */	
+}
+
+.birthdate{
+	padding-left: 2.5em;
+}
+
+/** footer */
+.footer {
+	position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #343a40;
+   color: white;
+   text-align: center;
+   margin-top: 1em;
+}
+
+/** User BookList **/
+#btnDisabled[disabled]
+{
+   cursor:not-allowed;
+   background-color:#ddd;
+   background:#ddd;
+   pointer-events:none;
+   border:2px outset ButtonFace;
+   color: #212529;
+}
